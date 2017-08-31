@@ -1,5 +1,6 @@
-server:
-  port: 7083
+
 spring:
   profiles:
     active: dev
+  application:
+    name: provider
