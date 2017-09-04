@@ -1,0 +1,5 @@
+server:
+  port: 7084
+spring:
+  application:
+    name: consumer
