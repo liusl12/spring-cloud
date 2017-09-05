@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class MicroserviceConsumerApplication {
+public class MicroserviceConsumerRibbonApplication {
 
 	@Bean
 	@LoadBalanced
@@ -17,6 +17,6 @@ public class MicroserviceConsumerApplication {
 		return new RestTemplate();
 	}
 	public static void main(String[] args) {
-		SpringApplication.run(MicroserviceConsumerApplication.class, args);
+		SpringApplication.run(MicroserviceConsumerRibbonApplication.class, args);
 	}
 }
