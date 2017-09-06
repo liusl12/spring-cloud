@@ -12,6 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @FeignClient(name = "provider")
 public interface UserFeignClient {
-    @GetMapping(value = "/{id}")//此处“value”的值应该是传参的值，注意path的格式
+    @GetMapping(value = "/{id}")//此处“value”的值应该是传参的值，注意path的格式,例如：我要访问的是http://localhost:7086/movie/feign/{id},此处的value可以是："/{id}"
     public User findById(@PathVariable("id") Long id);
 }
