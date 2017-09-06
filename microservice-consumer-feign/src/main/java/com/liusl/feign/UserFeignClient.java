@@ -12,6 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @FeignClient(name = "provider")
 public interface UserFeignClient {
-    @GetMapping(value = "/movie/feign/{id}")
-    public User findById(@PathVariable Long id);
+    @GetMapping(value = "/{id}")//此处“value”的值应该是传参的值，注意path的格式
+    public User findById(@PathVariable("id") Long id);
 }

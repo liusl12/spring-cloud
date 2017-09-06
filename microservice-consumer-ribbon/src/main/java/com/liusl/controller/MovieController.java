@@ -24,7 +24,7 @@ public class MovieController {
 
     @Autowired
     private RestTemplate restTemplate;
-    @Auto
+    @Autowired
     private LoadBalancerClient loadBalancerClient;//负载均衡客户端API
 
     @GetMapping("/movie/{id}")

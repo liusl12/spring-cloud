@@ -1,6 +1,7 @@
 package com.liusl.controller;
 
 import com.liusl.entity.User;
+import com.liusl.feign.UserFeignClient;
 import com.netflix.discovery.converters.Auto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,13 +24,14 @@ public class MovieController {
     private static final org.slf4j.Logger LOOGER= LoggerFactory.getLogger(MovieController.class);
 
     @Autowired
-    private RestTemplate restTemplate;
-    @Auto
     private LoadBalancerClient loadBalancerClient;//负载均衡客户端API
 
-    @GetMapping("/movie/{id}")
+    @Autowired
+    private UserFeignClient userFeignClient;//自动装载自定义的feign客户端接口
+
+    @GetMapping("/movie/feign/{id}")
     public User findById(@PathVariable Long id){
-        return this.restTemplate.getForObject("http://provider/"+id,User.class);
+        return this.userFeignClient.findById(id);
     }
 
     @GetMapping("/log-instance")
