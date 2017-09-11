@@ -32,7 +32,7 @@ public class MovieController {
     带容错能力的findById方法，如果访问失败时，会调用findByIdFallback方法，而不会因为多次调用失败后造成雪崩效应
      */
     @HystrixCommand(fallbackMethod = "findByIdFallback")
-    @GetMapping("/movie/{id}")
+    @GetMapping("/movie/hystrix/{id}")
     public User findById(@PathVariable Long id){
         return this.restTemplate.getForObject("http://provider/"+id,User.class);
     }
