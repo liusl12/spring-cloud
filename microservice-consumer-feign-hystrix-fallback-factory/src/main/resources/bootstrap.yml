@@ -1,0 +1,5 @@
+server:
+  port: 7089
+spring:
+  application:
+    name: consumer-feign-hystrix-fallback-factory
