@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.liusl</groupId>
-	<artifactId>microservice-consumer-ribbon</artifactId>
+	<artifactId>microservice-consumer-ribbon-hystrix</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>microservice-consumer-ribbon</name>
+	<name>microservice-consumer-ribbon-hystrix</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -40,6 +40,11 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-ribbon</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix</artifactId>
 		</dependency>
 
 		<dependency>
