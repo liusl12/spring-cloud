@@ -1,5 +1,0 @@
-server:
-  port: 7087
-spring:
-  application:
-    name: consumer-ribbon-hystrix
