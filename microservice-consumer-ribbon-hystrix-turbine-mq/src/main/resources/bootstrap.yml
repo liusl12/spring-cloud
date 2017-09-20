@@ -1,0 +1,5 @@
+server:
+  port: 7091
+spring:
+  application:
+    name: consumer-ribbon-hystrix-turbine-mq
