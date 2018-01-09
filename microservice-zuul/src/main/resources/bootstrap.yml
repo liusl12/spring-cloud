@@ -1,0 +1,5 @@
+server:
+  port: 7095
+spring:
+  application:
+    name: microsevice-zuul
