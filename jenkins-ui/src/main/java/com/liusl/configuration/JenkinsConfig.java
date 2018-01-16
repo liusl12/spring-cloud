@@ -13,9 +13,9 @@ import java.net.URISyntaxException;
  */
 @Configuration
 public class JenkinsConfig {
-    private static final String URL = "http://10.122.23.149:9082";
-    private static final String USERNAME = "admin";
-    private static final String PASSWORD = "admin123#";
+    private static final String URL = "http://10.99.246.99:8080/jenkins";
+    private static final String USERNAME = "microservice";
+    private static final String PASSWORD = "abcd-1234";
 
     @Bean
     public JenkinsServer jenkinsServer() throws URISyntaxException {

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.liusl.mapper.XMLMapper">
+    <!--获取所有信息-->
+    <select id="getAllXMLInfo" resultType="com.liusl.model.XMLProperties">
+        SELECT ID,Node,FatherNode,`Level`,Clazz,Plugin,PluginName,PluginVersion,Text
+        FROM xml_config
+    </select>
+    <!--根据node名称回去xml节点信息-->
+    <select id="getXMLInfoByNode" resultType="com.liusl.model.XMLProperties">
+        SELECT ID,Node,FatherNode,`Level`,Clazz,Plugin,PluginName,PluginVersion,Text
+        FROM xml_config
+        WHERE Node = #{node}
+    </select>
+    <!--查询xml文件的root节点-->
+    <select id="getXMLRootNode" resultType="com.liusl.model.XMLProperties">
+        SELECT ID,Node,FatherNode,`Level`,Clazz,Plugin,PluginName,PluginVersion,Text
+        FROM xml_config
+        WHERE Level = 1
+    </select>
+    <!--查询xml文件中某个节点是否有子节点，如果有返回子节点信息-->
+    <select id="getXMLChildrenNode" resultType="com.liusl.model.XMLProperties">
+        SELECT ID,Node,FatherNode,`Level`,Clazz,Plugin,PluginName,PluginVersion,Text
+        FROM xml_config
+        WHERE FatherNode = #{node}
+    </select>
+</mapper>
