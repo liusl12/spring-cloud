@@ -1,6 +1,6 @@
 eureka:
   client:
-    service-url:
+    com.liusl.service-url:
       defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
 management:
   security:
@@ -8,6 +8,6 @@ management:
 zuul:
   routes:
     user-route:
-      service-id: consumer-ribbon
+      com.liusl.service-id: consumer-ribbon
       path: /api/**
   prefix: /v1
