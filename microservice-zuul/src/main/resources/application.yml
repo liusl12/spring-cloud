@@ -7,7 +7,15 @@ management:
     enabled: false
 zuul:
   routes:
-    user-route:
-      com.liusl.service-id: consumer-ribbon
-      path: /api/**
-  prefix: /v1
+    movie-a:
+      path: /movie-feign/**
+      serviceId: CONSUMER-FEIGN
+    movie-b:
+      path: /movie/**
+      serviceId: PROVIDER
+#zuul:
+#  routes:
+#    user-route:
+#      com.liusl.service-id: consumer-ribbon
+#      path: /api/**
+#  prefix: /v1
