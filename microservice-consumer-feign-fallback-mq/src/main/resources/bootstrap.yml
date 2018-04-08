@@ -1,0 +1,5 @@
+server:
+  port: 7098
+spring:
+  application:
+    name: consumer-feign-fallback-mq

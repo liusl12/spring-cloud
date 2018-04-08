@@ -1,0 +1,5 @@
+server:
+  port: 7097
+spring:
+  application:
+    name: consumer-ribbon-hystrix-mq

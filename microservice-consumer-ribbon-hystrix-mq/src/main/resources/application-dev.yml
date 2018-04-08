@@ -1,0 +1,13 @@
+eureka:
+  client:
+    com.liusl.service-url:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+  instance:
+    prefer-ip-address: true
+##Rabbit Mq配置信息
+spring:
+  rabbitmq:
+    host: 10.99.246.99
+    port: 5672
+    username: guest
+    password: guest
