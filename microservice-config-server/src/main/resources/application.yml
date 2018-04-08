@@ -1,0 +1,7 @@
+server:
+  port: 7096
+spring:
+  profiles:
+    active: dev
+  application:
+    name: config-server

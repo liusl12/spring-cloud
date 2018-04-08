@@ -1,0 +1,13 @@
+#eureka:
+#  client:
+#    com.liusl.service-url:
+#      defaultZone: http://peer1:8762/eureka/;http://peer2:8762/eureka/
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@10.122.23.149:liusl12/config.git
+          search-paths: config_repo
+          username: liusl12
+          password: znNB-6641
