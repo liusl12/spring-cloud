@@ -1,7 +1,7 @@
 eureka:
   client:
     com.liusl.service-url:
-      defaultZone: http://peer1:8761/eureka/
+      defaultZone: http://peer1:8761/eureka/,http://peer3:8763/eureka/
   instance:
     hostname: peer2
   server:
